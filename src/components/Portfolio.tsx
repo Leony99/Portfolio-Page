@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { ExternalLink, Github, Terminal } from 'lucide-react';
+import React from 'react';
+import { ExternalLink, Github } from 'lucide-react';
+
 import styles from './Portfolio.module.css';
 
 interface Project {
@@ -32,89 +33,54 @@ const projects: Project[] = [
     id: 3,
     title: 'E-commerce Platform',
     description: 'A full-stack e-commerce solution with user authentication and payment integration.',
-    technologies: ['Next.js', 'Stripe', 'PostgreSQL'],
+    technologies: ['Next.js', 'Stripe'],
     githubUrl: 'https://github.com/yourusername/nextjs-ecommerce',
     liveUrl: 'https://nextjs-ecommerce-example.vercel.app',
   },
 ];
 
-const Portfolio: React.FC = () => {
-  const [activeProject, setActiveProject] = useState<Project | null>(null);
-  const [command, setCommand] = useState<string>('');
-
-  const handleCommand = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter') {
-      const cmd = command.toLowerCase().trim();
-      if (cmd === 'ls' || cmd === 'list') {
-        setActiveProject(null);
-      } else if (cmd.startsWith('view ')) {
-        const projectId = parseInt(cmd.split(' ')[1]);
-        const project = projects.find(p => p.id === projectId);
-        if (project) {
-          setActiveProject(project);
-        }
-      }
-      setCommand('');
-    }
-  };
-
+const PortfolioSection: React.FC = () => {
   return (
-    <section className={styles.terminalSection}>
-      <h2 className={styles.title}>{'<PortfolioTerminal />'}</h2>
-      <div className={styles.terminal}>
-        <div className={styles.terminalHeader}>
-          <div className={`${styles.terminalButton} ${styles.red}`}></div>
-          <div className={`${styles.terminalButton} ${styles.yellow}`}></div>
-          <div className={`${styles.terminalButton} ${styles.green}`}></div>
-        </div>
-        <div className={styles.terminalBody}>
-          <p className={styles.welcomeMessage}>Welcome to the Portfolio Terminal. Type 'ls' or 'list' to see all projects, or 'view [id]' to see details.</p>
-          {!activeProject ? (
-            <ul className={styles.projectList}>
-              {projects.map(project => (
-                <li key={project.id}>
-                  <span className={styles.projectId}>{project.id}</span>: {project.title}
-                </li>
+    <section className={styles.portfolioSection}>
+      <h2 className={styles.title}>{'<Portfolio />'}</h2>
+      <div className={styles.projectGrid}>
+        {projects.map((project) => (
+          <div key={project.id} className={styles.projectCard}>
+            <h3 className={styles.projectTitle}>{project.title}</h3>
+            <p className={styles.projectDescription}>{project.description}</p>
+            <div className={styles.techStack}>
+              {project.technologies.map((tech) => (
+                <span key={tech} className={styles.techTag}>
+                  {tech}
+                </span>
               ))}
-            </ul>
-          ) : (
-            <div className={styles.projectDetails}>
-              <h3 className={styles.projectTitle}>{activeProject.title}</h3>
-              <p className={styles.projectDescription}>{activeProject.description}</p>
-              <div className={styles.techStack}>
-                {activeProject.technologies.map(tech => (
-                  <span key={tech} className={styles.techTag}>
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <div className={styles.projectLinks}>
-                <a href={activeProject.githubUrl} target="_blank" rel="noopener noreferrer" className={styles.link}>
-                  <Github className={styles.icon} size={16} />
-                  GitHub
-                </a>
-                <a href={activeProject.liveUrl} target="_blank" rel="noopener noreferrer" className={styles.link}>
-                  <ExternalLink className={styles.icon} size={16} />
-                  Live Demo
-                </a>
-              </div>
             </div>
-          )}
-        </div>
-        <div className={styles.terminalInput}>
-          <Terminal className={styles.terminalIcon} size={20} />
-          <input
-            type="text"
-            value={command}
-            onChange={(e) => setCommand(e.target.value)}
-            onKeyUp={handleCommand}
-            className={styles.input}
-            placeholder="Type a command..."
-          />
-        </div>
+            <div className={styles.projectLinks}>
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.projectLink}
+              >
+                <Github className={styles.icon} size={20} />
+                <span className={styles.srOnly}>GitHub Repository</span>
+              </a>
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.projectLink}
+              >
+                <ExternalLink className={styles.icon} size={20} />
+                <span className={styles.srOnly}>Live Demo</span>
+              </a>
+            </div>
+            <span className={styles.projectCardHighlight}></span>
+          </div>
+        ))}
       </div>
     </section>
   );
 };
 
-export default Portfolio;
+export default PortfolioSection;

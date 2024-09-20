@@ -33,6 +33,7 @@ const Hero: React.FC = () => {
         <div className={styles.content}>
           <h1 className={styles.title}>
             John Doe
+            <span className={styles.titleBackground} aria-hidden="true">{`{ }`}</span>
           </h1>
           <p className={styles.subtitle}>
             {text}

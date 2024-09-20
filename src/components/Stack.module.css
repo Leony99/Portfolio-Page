@@ -6,7 +6,7 @@
 }
 
 .title {
-    color: #48bb78;
+    color: var(--green-primary);
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 2rem;
@@ -33,12 +33,12 @@
 
 .icon {
     font-size: 2.5rem;
-    color: #48bb78;
+    color: var(--green-primary);
     margin-bottom: 0.5rem;
 }
 
 .iconName {
-    color: #a0aec0;
+    color: var(--text-secondary);
     font-size: 0.7rem;
     text-align: center;
 }

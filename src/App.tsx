@@ -5,7 +5,6 @@ import Stack from './components/Stack';
 import Portfolio from './components/Portfolio';
 
 import styles from './App.module.css';
-import PortfolioSection from './components/PortfolioSection';
 
 function App() {
 
@@ -15,7 +14,6 @@ function App() {
         <Navbar />
         <Hero />
         <Stack />
-        <PortfolioSection />
         <Portfolio />
       </div>
   )

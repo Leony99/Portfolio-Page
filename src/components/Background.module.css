@@ -12,6 +12,6 @@
 
 .codeSnippet {
     position: absolute;
-    color: #48bb78;
+    color: var(--green-primary);
     white-space: nowrap;
 }

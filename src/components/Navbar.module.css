@@ -31,14 +31,14 @@
 }
 
 .logo {
-  color: #48bb78;
+  color: var(--green-primary);
   font-weight: bold;
   font-size: 1.25rem;
   text-decoration: none;
 }
 
 .title {
-  color: #a0aec0;
+  color: var(--text-secondary);
   font-weight: 600;
   display: none;
 }
@@ -48,7 +48,7 @@
 }
 
 .navLink {
-  color: #a0aec0;
+  color: var(--text-secondary);
   padding: 0.5rem 0.75rem;
   font-size: 0.875rem;
   font-weight: 500;
@@ -57,8 +57,8 @@
 }
 
 .navLink:hover {
-  color: #48bb78;
-  border-color: #48bb78;
+  color: var(--green-primary);
+  border-color: var(--green-primary);
 }
 
 .mobileMenuToggle {
@@ -67,9 +67,9 @@
 }
 
 .menuButton {
-  color: #48bb78;
+  color: var(--green-primary);
   background: none;
-  border: 1px solid #48bb78;
+  border: 1px solid var(--green-primary);
   padding: 0.5rem;
   cursor: pointer;
   display: flex;
@@ -78,8 +78,8 @@
 }
 
 .menuButton:hover {
-  color: #38a169;
-  border-color: #38a169;
+  color: var(--green-secondary);
+  border-color: var(--green-secondary);
 }
 
 .menuIcon {
@@ -88,12 +88,12 @@
 }
 
 .mobileMenu {
-  border-top: 2px solid #48bb78;
+  border-top: 2px solid var(--green-primary);
   padding: 0.5rem 0;
 }
 
 .mobileNavLink {
-  color: #a0aec0;
+  color: var(--text-secondary);
   display: block;
   padding: 0.75rem 1rem;
   font-size: 1rem;
@@ -103,8 +103,8 @@
 }
 
 .mobileNavLink:hover {
-  color: #48bb78;
-  border-color: #48bb78;
+  color: var(--green-primary);
+  border-color: var(--green-primary);
 }
 
 @media (min-width: 810px) {
