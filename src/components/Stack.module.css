@@ -1,0 +1,58 @@
+.stack {
+    padding: 2rem;
+    font-family: 'Fira Code', monospace;
+    z-index: 10;
+    margin-top: 2rem;
+}
+
+.title {
+    color: #48bb78;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.iconGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+.iconWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.iconWrapper:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    font-size: 2.5rem;
+    color: #48bb78;
+    margin-bottom: 0.5rem;
+}
+
+.iconName {
+    color: #a0aec0;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+@media (min-width: 480px) {
+    .iconGrid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .icon {
+        font-size: 3rem;
+    }
+
+    .iconName {
+        font-size: 0.75rem;
+    }
+}

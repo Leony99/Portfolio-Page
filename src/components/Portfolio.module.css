@@ -1,0 +1,139 @@
+.terminalSection {
+    background-color: #1a202c;
+    padding: 2rem;
+    font-family: 'Fira Code', monospace;
+    z-index: 10;
+    margin-top: 2rem;
+  }
+  
+  .title {
+    color: #48bb78;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .terminal {
+    background-color: #000000;
+    border-radius: 0.5rem;
+    border: 2px solid #48bb78;
+    box-shadow: 0 0 20px rgba(72, 187, 120, 0.2);
+    overflow: hidden;
+  }
+  
+  .terminalHeader {
+    display: flex;
+    padding: 0.5rem;
+    background-color: #2d3748;
+  }
+  
+  .terminalButton {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+  
+  .red { background-color: #f56565; }
+  .yellow { background-color: #ecc94b; }
+  .green { background-color: #48bb78; }
+  
+  .terminalBody {
+    height: 320px;
+    overflow-y: auto;
+    padding: 1rem;
+    color: #ffffff;
+  }
+  
+  .welcomeMessage {
+    color: #48bb78;
+    margin-bottom: 1rem;
+  }
+  
+  .projectList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .projectList li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .projectId {
+    color: #ecc94b;
+  }
+  
+  .projectDetails {
+    margin-top: 1rem;
+  }
+  
+  .projectTitle {
+    color: #ecc94b;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .projectDescription {
+    margin-bottom: 1rem;
+  }
+  
+  .techStack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .techTag {
+    background-color: #2d3748;
+    color: #48bb78;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+  }
+  
+  .projectLinks {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .link {
+    color: #4299e1;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  .icon {
+    margin-right: 0.25rem;
+  }
+  
+  .terminalInput {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-top: 1px solid #2d3748;
+  }
+  
+  .terminalIcon {
+    color: #48bb78;
+    margin-right: 0.5rem;
+  }
+  
+  .input {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 1rem;
+    flex-grow: 1;
+  }
+  
+  .input:focus {
+    outline: none;
+  }

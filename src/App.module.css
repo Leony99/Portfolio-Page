@@ -1,0 +1,9 @@
+.app {
+    background-color: #1a202c;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Fira Code', monospace;
+}

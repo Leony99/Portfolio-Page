@@ -1,0 +1,127 @@
+.navbar {
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+  font-family: 'Fira Code', monospace;
+}
+
+.visible {
+  transform: translateY(0);
+}
+
+.hidden {
+  transform: translateY(-100%);
+}
+
+.navbarContent {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  color: #48bb78;
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.title {
+  color: #a0aec0;
+  font-weight: 600;
+  display: none;
+}
+
+.desktopMenu {
+  display: none;
+}
+
+.navLink {
+  color: #a0aec0;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.navLink:hover {
+  color: #48bb78;
+  border-color: #48bb78;
+}
+
+.mobileMenuToggle {
+  display: flex;
+  align-items: center;
+}
+
+.menuButton {
+  color: #48bb78;
+  background: none;
+  border: 1px solid #48bb78;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuButton:hover {
+  color: #38a169;
+  border-color: #38a169;
+}
+
+.menuIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.mobileMenu {
+  border-top: 2px solid #48bb78;
+  padding: 0.5rem 0;
+}
+
+.mobileNavLink {
+  color: #a0aec0;
+  display: block;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.mobileNavLink:hover {
+  color: #48bb78;
+  border-color: #48bb78;
+}
+
+@media (min-width: 810px) {
+  .title {
+    display: inline;
+  }
+
+  .desktopMenu {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .mobileMenuToggle {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: none;
+  }
+}
