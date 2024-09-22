@@ -31,6 +31,16 @@
   flex-direction: column;
 }
 
+.projectCard.low {
+  box-shadow: none;
+}
+.projectCard.medium {
+  box-shadow: 0 0 15px rgba(236, 201, 75, 0.4);
+}
+.projectCard.high {
+  box-shadow: 0 0 15px rgba(72, 187, 120, 0.4);
+}
+
 .projectCardHighlight {
   position: absolute;
   inset: 0;

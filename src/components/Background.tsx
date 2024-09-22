@@ -15,7 +15,7 @@ const Background: React.FC = () => {
   
   return (
     <div className={styles.backgroundCode}>
-      {[...Array(25)].map((_, i) => (
+      {[...Array(30)].map((_, i) => (
         <div
           key={i}
           className={styles.codeSnippet}

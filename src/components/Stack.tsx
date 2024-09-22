@@ -23,7 +23,7 @@ const techStack: TechItem[] = [
 const Stack: React.FC = () => {
   return (
     <section className={styles.stack}>
-      <h2 className={styles.title}>{'<TechStack />'}</h2>
+      <h2 className={styles.title}>{'<Tecnologias />'}</h2>
       <div className={styles.iconGrid}>
         {techStack.map((tech) => (
           <div key={tech.name} className={styles.iconWrapper}>

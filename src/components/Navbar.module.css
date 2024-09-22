@@ -89,7 +89,8 @@
 
 .mobileMenu {
   border-top: 2px solid var(--green-primary);
-  padding: 0.5rem 0;
+  border-bottom: 2px solid var(--green-primary);
+  background: var(--background-secondary);
 }
 
 .mobileNavLink {
@@ -98,8 +99,6 @@
   padding: 0.75rem 1rem;
   font-size: 1rem;
   font-weight: 500;
-  transition: all 0.2s;
-  border: 1px solid transparent;
 }
 
 .mobileNavLink:hover {

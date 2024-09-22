@@ -1,0 +1,88 @@
+.footer {
+    background-color: var(--background-secondary);
+    color: var(--green-primary);
+    font-family: 'Fira Code', monospace;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    z-index: 5;
+}
+
+.container {
+    max-width: 100%;
+    position: relative;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.contactList {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.icon {
+    margin-right: 0.5rem;
+}
+
+.link {
+    color: var(--green-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: var(--text-primary);
+}
+
+.socialLinks {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.socialLink {
+    color: var(--green-primary);
+    transition: color 0.3s ease;
+}
+
+.socialLink:hover {
+    color: var(--text-primary);
+}
+
+.credit {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+
+.creditLink {
+    font-weight: bold;
+    color: var(--green-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.creditLink:hover {
+    color: var(--text-primary);
+}

@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
+import { personalData } from '../data/PersonalData';
+
 import styles from './Hero.module.css';
 
 const Hero: React.FC = () => {
   const [text, setText] = useState('');
-  const fullText = '< Full-Stack Developer />';
+  const fullText = '< Desenvolvedor Front-end />';
   const [cursorVisible, setCursorVisible] = useState(true);
 
   useEffect(() => {
@@ -32,24 +34,21 @@ const Hero: React.FC = () => {
       <div className={styles.container}>
         <div className={styles.content}>
           <h1 className={styles.title}>
-            John Doe
+            {personalData.name}
             <span className={styles.titleBackground} aria-hidden="true">{`{ }`}</span>
           </h1>
           <p className={styles.subtitle}>
             {text}
             <span className={`${styles.cursor} ${cursorVisible ? styles.visible : styles.hidden}`}></span>
           </p>
-          <p className={styles.description}>
-            Transforming complex algorithms into elegant solutions. 
-            Bridging the gap between logic and creativity in the digital realm.
-          </p>
+          <p className={styles.description} dangerouslySetInnerHTML={{ __html: personalData.bio }}></p>
           <div className={styles.cta}>
-            <a href="#projects" className={styles.primaryButton}>
-              <span className={styles.buttonText}>{'view_projects()'}</span>
+            <a href={personalData.linkedin} target='_blank' className={styles.primaryButton}>
+              <span className={styles.buttonText}>{'abrir_LinkedIn()'}</span>
               <span className={styles.buttonHighlight}></span>
             </a>
-            <a href="#contact" className={styles.secondaryButton}>
-              <span className={styles.buttonText}>{'contact.send()'}</span>
+            <a href={personalData.github} target='_blank' className={styles.secondaryButton}>
+              <span className={styles.buttonText}>{'conferir.GitHub()'}</span>
               <span className={styles.buttonHighlight}></span>
             </a>
           </div>
