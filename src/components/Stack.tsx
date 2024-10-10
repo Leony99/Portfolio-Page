@@ -1,5 +1,6 @@
 import { SiHtml5, SiCss3, SiJavascript, SiNodedotjs, SiJquery, 
-  SiBootstrap, SiReact, SiTypescript, SiWebpack} from 'react-icons/si';
+  SiBootstrap, SiReact, SiTypescript, SiTailwindcss, SiWebpack} from 'react-icons/si';
+import { RiNextjsFill } from 'react-icons/ri';
 
 import styles from './Stack.module.css';
 
@@ -15,9 +16,11 @@ const techStack: TechItem[] = [
   { name: 'Node.js', icon: SiNodedotjs },
   { name: 'Jquery', icon: SiJquery },
   { name: 'Bootstrap', icon: SiBootstrap },
-  { name: 'React', icon: SiReact },
-  { name: 'TypeScript', icon: SiTypescript },
   { name: 'Webpack', icon: SiWebpack },
+  { name: 'React', icon: SiReact },
+  { name: 'Next.js', icon: RiNextjsFill },
+  { name: 'TypeScript', icon: SiTypescript },
+  { name: 'TailwindCSS', icon: SiTailwindcss },
 ];
 
 const Stack: React.FC = () => {

@@ -6,7 +6,7 @@ import styles from './Hero.module.css';
 
 const Hero: React.FC = () => {
   const [text, setText] = useState('');
-  const fullText = '< Desenvolvedor Front-end />';
+  const fullText = `< ${personalData.position} />`;
   const [cursorVisible, setCursorVisible] = useState(true);
 
   useEffect(() => {
