@@ -20,14 +20,6 @@ const projects: Project[] = [
         githubUrl: 'https://github.com/Leony99/Ecommerce',
     },
     {
-        id: 2,
-        title: 'Car CRUD',
-        interest: 'low',
-        description: 'CRUD simples em php utilizando PHPMyAdmin.',
-        technologies: ['Full-Stack', 'HTML', 'CSS', 'JavaScript', 'PHP'],
-        githubUrl: 'https://github.com/Leony99/Car-Manager',
-    },
-    {
         id: 3,
         title: 'Gallery',
         interest: 'low',
@@ -69,6 +61,15 @@ const projects: Project[] = [
         technologies: ['Full-Stack', 'Next.js', 'TypeScript', 'TailwindCSS', 'API'],
         githubUrl: 'https://github.com/Leony99/Discover',
         liveUrl: 'https://discover-black.vercel.app/',
+    },
+    {
+        id: 8,
+        title: 'API Example',
+        interest: 'high',
+        description: 'Criação de endpoints para API utilizando Next.js.',
+        technologies: ['Back-end', 'Next.js', 'TypeScript', 'TailwindCSS', 'MongoDB'],
+        githubUrl: 'https://github.com/Leony99/API-Example',
+        liveUrl: 'https://api-example-two.vercel.app/',
     },
 ];
 

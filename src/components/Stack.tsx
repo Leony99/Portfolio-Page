@@ -1,5 +1,5 @@
 import { SiHtml5, SiCss3, SiJavascript, SiNodedotjs, SiJquery, 
-  SiBootstrap, SiReact, SiTypescript, SiTailwindcss, SiWebpack} from 'react-icons/si';
+  SiBootstrap, SiReact, SiTypescript, SiTailwindcss, SiWebpack, SiMongodb } from 'react-icons/si';
 import { RiNextjsFill } from 'react-icons/ri';
 
 import styles from './Stack.module.css';
@@ -21,6 +21,7 @@ const techStack: TechItem[] = [
   { name: 'Next.js', icon: RiNextjsFill },
   { name: 'TypeScript', icon: SiTypescript },
   { name: 'TailwindCSS', icon: SiTailwindcss },
+  { name: 'MongoDB', icon: SiMongodb }
 ];
 
 const Stack: React.FC = () => {
