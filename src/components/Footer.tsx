@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail, Phone } from 'lucide-react';
+import { Github, Linkedin, Mail,  } from 'lucide-react';
 
 import { personalData } from '../data/PersonalData';
 
@@ -12,11 +12,11 @@ const Footer: React.FC = () => {
         <div className={styles.content}>
           <h2 className={styles.title}>Contato</h2>
           <ul className={styles.contactList}>
-            <li className={styles.contactItem}>
+            {/*<li className={styles.contactItem}>
               <Phone size={18} className={styles.icon} />
               <a href={`https://wa.me/${personalData.phone}`} target="_blank"
               className={styles.link}>{personalData.phone}</a>
-            </li>
+            </li>*/}
             <li className={styles.contactItem}>
               <Mail size={18} className={styles.icon} />
               <a href={`mailto:${personalData.email}`} className={styles.link}>{personalData.email}</a>

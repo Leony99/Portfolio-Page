@@ -5,7 +5,7 @@ type PersonalData = {
     linkedin: string;
     github: string;
     email: string;
-    phone: string;
+    phone?: string;
 };
 
 const personalData: PersonalData = {
